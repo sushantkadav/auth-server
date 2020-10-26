@@ -15,6 +15,7 @@ public class ClientService {
     }
 
     public Client getByClientId(String clientId) {
+
         Optional<Client> clientOptional = clientRepository.findClientByClientId(clientId);
         if (clientOptional.isPresent()) {
             return clientOptional.get();
