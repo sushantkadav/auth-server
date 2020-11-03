@@ -1,0 +1,5 @@
+# to generate key-pair
+  keytool -genkeypair -alias remitone -keyalg RSA -keypass lganeshg -keystore remitone.jks -storepass lganeshg
+
+# to retrieve public key
+  keytool -list -rfc --keystore remitone.jks | openssl x509 -inform pem -pubkey
